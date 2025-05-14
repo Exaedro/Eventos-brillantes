@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.oscuro {
+    background-color: #000;
+}
+
+.navegacion-container {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.navegacion {
+    height: 70px;
+    background-color: #000;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 500px;
+}
+
+.navegacion a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.navegacion a::before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    height: 1.5px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+.navegacion a:hover {
+    color: #fff!important;
+    text-decoration: none!important;
+}
+
+.navegacion a:hover::before {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+}
+
+.lista-item {
+    margin-bottom: 20px;
+}
+
+.lista-titulo {
+    margin-bottom: 7px;
+}
+
+.container {
+    margin-top: 150px;
+}
+
+.naranja {
+    color: #ff7f4c;
+}
+
+.carta-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carta-titulo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.carta-precio {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.carta-precio .carta-texto-muted {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.foto {
+    background-image: url('./img/salon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.foto .titulo-principal {
+    color: #fff;
+    font-size: clamp(1.75rem, -1.6875rem + 11vw, 4.5rem);
+    width: 1200px;
+    text-wrap: balance;
+    backdrop-filter: blur(3px);
+    border-radius: 30px;
+    font-weight: 700;
+    margin-left: 40px;
+}
+
+.carousel {
+    height: 600px;
+    overflow: hidden;
+}
+
+footer {
+    background-color: #fec5ae;
+    height: 200px;
+    margin-top: 80px;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-bloque .links {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modo-oscuro {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.modo-oscuro:hover {
+    transform: rotateZ(180deg)
+}
+
+.bloque-mdn {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bloque-mdn i {
+    font-size: 18px;
+    background-color: #ff956b;
+    padding: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+    border-radius: 100%;
+}
+
+.bloque-mdn .mdn-titulo {
+    font-size: 18px;
+    font-weight: 700;
+}
